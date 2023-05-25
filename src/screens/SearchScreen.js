@@ -133,7 +133,7 @@ export default function SearchScreen() {
     const filterPrice = filter.price || price;
     const sortOrder = filter.order || order;
     return {
-      pathname: 'https://amazona-api-hfe1.onrender.com/search',
+      pathname: '/search',
       search: `?category=${filterCategory}&query=${filterQuery}&price=${filterPrice}&rating=${filterRating}&order=${sortOrder}&page=${filterPage}`,
     };
   };
