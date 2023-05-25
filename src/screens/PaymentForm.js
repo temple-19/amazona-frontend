@@ -39,7 +39,7 @@ const PaymentForm = () => {
       dispatch({ type: 'FETCH_REQUEST' });
       try {
         const { data } = await axios.get(
-          `/api/orders/${orderId}`,
+          `https://amazona-api-hfe1.onrender.com/api/orders/${orderId}`,
 
           { headers: { Authorization: `Bearer ${userInfo.token}` } }
         );
@@ -59,7 +59,7 @@ const PaymentForm = () => {
     event.preventDefault();
     setIsLoading(true);
     try {
-      const response = await axios.post(`/api/proxy`, {
+      const response = await axios.post(`https://amazona-api-hfe1.onrender.com/api/proxy`, {
         cardName: event.target.name.value,
         number: `${event.target.cardNumber.value}`,
         expiry_month: `${event.target.expiryMonth.value}`,
@@ -76,7 +76,7 @@ const PaymentForm = () => {
       if (response.data.approved === '1') {
         // Payment successful
         const data = await axios.put(
-          `/api/orders/${order._id}/pay`,
+          `https://amazona-api-hfe1.onrender.com/api/orders/${order._id}/pay`,
           {},
           {
             headers: {
