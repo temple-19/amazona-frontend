@@ -49,7 +49,7 @@ export default function PlaceOrderScreen() {
       dispatch({ type: 'CREATE_REQUEST' });
 
       const { data } = await Axios.post(
-        '/api/orders',
+        'https://amazona-api-hfe1.onrender.com/api/orders',
         {
           orderItems: cart.cartItems,
           shippingAddress: cart.shippingAddress,
