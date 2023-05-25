@@ -91,7 +91,7 @@ export default function SearchScreen() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { data } = await axios.get('/api/products/search', {
+        const { data } = await axios.get('https://amazona-api-hfe1.onrender.com/api/products/search', {
           params: {
             page: page,
             query: query,
@@ -116,7 +116,7 @@ export default function SearchScreen() {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const { data } = await axios.get(`/api/products/categories`);
+        const { data } = await axios.get(`https://amazona-api-hfe1.onrender.com/api/products/categories`);
         setCategories(data);
       } catch (err) {
         toast.error(getError(err));
@@ -133,7 +133,7 @@ export default function SearchScreen() {
     const filterPrice = filter.price || price;
     const sortOrder = filter.order || order;
     return {
-      pathname: '/search',
+      pathname: 'https://amazona-api-hfe1.onrender.com/search',
       search: `?category=${filterCategory}&query=${filterQuery}&price=${filterPrice}&rating=${filterRating}&order=${sortOrder}&page=${filterPage}`,
     };
   };
