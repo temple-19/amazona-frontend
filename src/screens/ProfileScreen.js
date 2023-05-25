@@ -37,7 +37,7 @@ export default function ProfileScreen() {
     e.preventDefault();
     try {
       const { data } = await axios.put(
-        '/api/users/profile',
+        'https://amazona-api-hfe1.onrender.com/api/users/profile',
         {
           name,
           email,
