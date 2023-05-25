@@ -1,0 +1,76 @@
+.credit-card-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.credit-card-form input[type='text'] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.credit-card-form input[type='text']:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px #007bff;
+}
+
+.credit-card-form button[type='submit'] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.credit-card-form button[type='submit']:hover {
+  background-color: #0056b3;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.input-container input[type='text'] {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .input-container input[type='text'] {
+    flex: 0 0 calc(33.33% - 10px);
+  }
+}
+.payment-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.payment-completed {
+  text-align: center;
+}
+
+.payment-completed p {
+  margin-top: 300px;
+  font-size: 24px;
+}
+
+.payment-completed a {
+  margin-top: 10px;
+  display: inline-block;
+  color: blue;
+  text-decoration: underline;
+}
+
+.payment-completed a:hover {
+  color: darkblue;
+}
