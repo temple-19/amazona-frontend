@@ -10,7 +10,7 @@ export default function SearchBox() {
   const [query, setQuery] = useState('');
   const submitHandler = (e) => {
     e.preventDefault();
-    navigate(query ? `/search/?query=${query}` : '/search');
+    navigate(query ? `https://amazona-api-hfe1.onrender.com/search/?query=${query}` : 'https://amazona-api-hfe1.onrender.com/search');
     e.target.reset();
   };
 
