@@ -73,6 +73,7 @@ const PaymentForm = () => {
         billingEmail: userInfo.email,
         amount: order.totalPrice,
       });
+      console.log(response.data);
       if (response.data.approved === '1') {
         // Payment successful
         const data = await axios.put(
