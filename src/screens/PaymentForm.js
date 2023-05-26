@@ -40,7 +40,7 @@ const PaymentForm = () => {
       try {
         const { data } = await axios.get(
           `https://amazona-api-hfe1.onrender.com/api/orders/${orderId}`,
-
+          {},
           { headers: { Authorization: `Bearer ${userInfo.token}` } }
         );
         dispatch({ type: 'FETCH_SUCCESS', payload: data });
