@@ -77,7 +77,6 @@ const PaymentForm = () => {
         // Payment successful
         const data = await axios.put(
           `https://amazona-api-hfe1.onrender.com/api/orders/${order._id}/pay`,
-          {},
           {
             headers: {
               authorization: `Bearer ${userInfo.token}`,
